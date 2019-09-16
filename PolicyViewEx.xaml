@@ -1,0 +1,59 @@
+﻿<Window x:Class="PolReader.PolicyViewEx"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="PolicyViewEx" Height="600" Width="640" 
+        xmlns:loc="clr-namespace:PolReader"
+        WindowStyle="ToolWindow" ShowInTaskbar="False" 
+        WindowStartupLocation="CenterOwner" KeyDown="Window_KeyDown">
+    <Window.Resources>
+        <loc:ImageConverter x:Key="ImageConverter" />
+    </Window.Resources>
+    
+    <Grid Background="{StaticResource greyControlGradient}" Name="FormContainer">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>        
+    </Grid.RowDefinitions>
+
+        <GroupBox Margin="10,10,10,0" Grid.Row="0">
+        <GroupBox.Header >
+            Policy Settings
+        </GroupBox.Header>
+    
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>    
+            </Grid.ColumnDefinitions>
+                
+            <TreeView  Name="CompareTreeView" MinWidth="160" Grid.Column="0">
+                <TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate ItemsSource="{Binding Children}">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Margin="5,5,5,5" Source="{Binding Path=IconString, Converter={StaticResource ImageConverter}}" Width="16" Height="16" Stretch="Fill" ></Image>
+                            <TextBlock Margin="5,5,5,5"  Text="{Binding Name}" />
+                        </StackPanel>
+                    </HierarchicalDataTemplate>
+                </TreeView.ItemTemplate>
+            </TreeView>
+            
+            <GridSplitter  Grid.Column="1"  HorizontalAlignment="Left" 
+                  VerticalAlignment="Stretch" 
+                  ResizeBehavior="PreviousAndNext"
+                  Width="5" Background="{StaticResource DarkGreyControlGradient}">
+                </GridSplitter>
+            
+                <ListView Name="MachinePolicyItems" Grid.Column="2">
+            <ListView.View >
+                <GridView ColumnHeaderContainerStyle="{StaticResource CustomHeaderStyle}" >
+                    <GridViewColumn Header="Key" DisplayMemberBinding="{Binding Path=Key}"></GridViewColumn>
+                    <GridViewColumn Header="Value" DisplayMemberBinding="{Binding Path=Value}"></GridViewColumn>
+                    <GridViewColumn Header="StringType" DisplayMemberBinding="{Binding Path=StringType}"></GridViewColumn>
+                    <GridViewColumn Header="Data" DisplayMemberBinding="{Binding Path=Data}"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+            </ListView>            
+        </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

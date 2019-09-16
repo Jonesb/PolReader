@@ -1,0 +1,32 @@
+﻿<Application x:Class="PolReader.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" DispatcherUnhandledException="Application_DispatcherUnhandledException"
+    StartupUri="Window1.xaml">
+    <Application.Resources>
+        <LinearGradientBrush x:Key="greyButtonGradient"  StartPoint="1,1" EndPoint="1,0">
+            <GradientStop Color="#ffffff"  Offset="0">
+            </GradientStop>
+            <GradientStop Color="#dddddd" Offset="1">
+            </GradientStop>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="greyControlGradient" StartPoint="1,1" EndPoint="1,0">
+            <GradientStop Color="#eaeaea"  Offset="0">
+            </GradientStop>
+            <GradientStop Color="#eeeeee" Offset="1">
+            </GradientStop>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="DarkGreyControlGradient" StartPoint="1,1" EndPoint="1,0">
+            <GradientStop Color="#eeeeee"  Offset="0">
+            </GradientStop>
+            <GradientStop Color="#dddddd" Offset="1">
+            </GradientStop>
+        </LinearGradientBrush>
+
+        <Style x:Key="CustomHeaderStyle" TargetType="{x:Type GridViewColumnHeader}">
+            <Setter Property="Background" Value="{StaticResource greyButtonGradient}" />
+            <Setter Property="Foreground" Value="#FF07034B"/>
+        </Style>
+    </Application.Resources>
+</Application>

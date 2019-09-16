@@ -1,0 +1,39 @@
+﻿<Window x:Class="PolReader.SelectFolder"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:loc="clr-namespace:PolReader"
+    Title="Select Folder" Height="123" Width="450"        
+        WindowStyle="ToolWindow" ShowInTaskbar="False" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+
+    <Window.Resources>
+
+        <loc:ImageConverter x:Key="ImageConverter" />
+        <loc:AppSettings x:Key="AppSettings" />
+
+
+    </Window.Resources>
+
+    <Grid Background="{StaticResource greyControlGradient}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <GroupBox Margin="5,5,5,5" Grid.Column="0" HorizontalAlignment="Center">
+            <GroupBox.Header>
+                Folder
+            </GroupBox.Header>
+            <StackPanel Orientation="Horizontal">
+                <!--<TextBox Name="FolderText" Width="270" MaxHeight="26" Text="{Binding Source={StaticResource AppSettings},Path=LastGPFolderLocation,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></TextBox>-->
+                <ComboBox Name="FolderText" Width="360" MaxHeight="26" ItemsSource="{Binding Source={StaticResource AppSettings},Path=GPFolderLocs}" Text="{Binding Source={StaticResource AppSettings},Path=LastGPFolderLoc,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" IsEditable="True"></ComboBox>
+                <Button Margin="10,0,0,0" Padding="5,0,5,0" Click="Button_Click">...</Button>
+            </StackPanel>
+            
+        </GroupBox>
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="2">
+            <Button Name="OKButton" IsDefault="True"  IsEnabled="{Binding ElementName=FolderText,Path=Text.Length}" Margin="5,5,5,5" Content="OK" Width="60" Click="OKButton_Click"></Button>
+            <Button Name="CancelButtton" IsCancel="True" Margin="5,5,5,5" Content="Cancel" Width="60"></Button>
+        </StackPanel>
+    </Grid>
+    </Window>

@@ -1,0 +1,529 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5325BE7E-0C7F-41B6-8166-5285903E2E1D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PolReader</RootNamespace>
+    <AssemblyName>PolReader</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <ApplicationIcon>EXPLORER.ICO</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Tester|AnyCPU'">
+    <OutputPath>bin\Tester\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="ADMX\ADMXSelect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AssignmentSearcher.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CompareViewEx.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IEAKSearcher.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LinkageSearcher.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="OUSelector\ADPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CompareView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="OUSelector\MachineSearch.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="OUSelector\DomainUserSearch.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="OUSelector\ViewModel\UserSearch.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PolicySearcher.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PolicySelect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PolicyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PreferenceSearcher.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProgressView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SecEditSearcher.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SelectFolder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WMISearcher.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppSettings.cs" />
+    <Compile Include="CompareViewEx.xaml.cs">
+      <DependentUpon>CompareViewEx.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GPOManagement.cs" />
+    <Compile Include="ObjectBoolConverter.cs" />
+    <Compile Include="RegExistToColor.cs" />
+    <Compile Include="SelectFolder.xaml.cs">
+      <DependentUpon>SelectFolder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADMX\ADMXSelect.xaml.cs">
+      <DependentUpon>ADMXSelect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ADMX\ADMLFile.cs" />
+    <Compile Include="ADMX\ADMLItem.cs" />
+    <Compile Include="ADMX\CategoryItem.cs" />
+    <Compile Include="ADMX\EnumValue.cs" />
+    <Compile Include="ADMX\GPOTemplateItem.cs" />
+    <Compile Include="ADMX\GPOTemplates.cs" />
+    <Compile Include="AssignmentSearcher.xaml.cs">
+      <DependentUpon>AssignmentSearcher.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DB.cs" />
+    <Compile Include="DiffingClasses\AssignmentsDiffInfo.cs" />
+    <Compile Include="DiffingClasses\AssignmentsDiffInfoItem.cs" />
+    <Compile Include="DiffingClasses\BaseDiffViewItem.cs" />
+    <Compile Include="DiffingClasses\IEAKDiffInfo.cs" />
+    <Compile Include="DiffingClasses\LinkageDiffInfo.cs" />
+    <Compile Include="DiffingClasses\LinkageDiffInfoItem.cs" />
+    <Compile Include="DiffingClasses\RegDiffInfo.cs" />
+    <Compile Include="DiffingClasses\RegDiffItemInfo.cs" />
+    <Compile Include="DiffingClasses\SecEditDiffSectionInfo.cs" />
+    <Compile Include="DiffingClasses\SecEditDiffValueInfo.cs" />
+    <Compile Include="DiffingClasses\WMIDiffInfoItem.cs" />
+    <Compile Include="DiffingClasses\XmlNodeDiffInfo.cs" />
+    <Compile Include="DiffingClasses\XmlPropertyDiffInfo.cs" />
+    <Compile Include="ExcelXML\Cell.cs" />
+    <Compile Include="ExcelXML\Column.cs" />
+    <Compile Include="ExcelXML\Row.cs" />
+    <Compile Include="ExcelXML\Style.cs" />
+    <Compile Include="ExcelXML\Styles.cs" />
+    <Compile Include="ExcelXML\WorkBook.cs" />
+    <Compile Include="ExcelXML\WorkSheet.cs" />
+    <Compile Include="IEAKSearcher.xaml.cs">
+      <DependentUpon>IEAKSearcher.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LinkageDisplayConverter.cs" />
+    <Compile Include="LinkageSearcher.xaml.cs">
+      <DependentUpon>LinkageSearcher.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OUSelector\ADPicker.xaml.cs">
+      <DependentUpon>ADPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AutoRunInfo.cs" />
+    <Compile Include="CompareView.xaml.cs">
+      <DependentUpon>CompareView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DiffingClasses\DiffPolicyInfo.cs" />
+    <Compile Include="ImageConverter.cs" />
+    <Compile Include="ObservableCollection\CollectionChangedWrapperEventData.cs" />
+    <Compile Include="ObservableCollection\MTObservableCollection.cs" />
+    <Compile Include="ObservableCollection\NotifyCollectionChangedWrapper.cs" />
+    <Compile Include="OUSelector\Classes\ADQuery.cs" />
+    <Compile Include="OUSelector\Classes\Domain.cs" />
+    <Compile Include="OUSelector\Classes\DomainUser.cs" />
+    <Compile Include="OUSelector\Classes\OU.cs" />
+    <Compile Include="OUSelector\MachineSearch.xaml.cs">
+      <DependentUpon>MachineSearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OUSelector\DomainUserSearch.xaml.cs">
+      <DependentUpon>DomainUserSearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OUSelector\ViewModel\AllDomainsViewModel.cs" />
+    <Compile Include="OUSelector\Classes\DomainMachine.cs" />
+    <Compile Include="OUSelector\ViewModel\TreeViewMVItem.cs" />
+    <Compile Include="OUSelector\ViewModel\DomainViewModel.cs" />
+    <Compile Include="OUSelector\ViewModel\OUViewModel.cs" />
+    <Compile Include="OUSelector\ViewModel\UserSearch.xaml.cs">
+      <DependentUpon>UserSearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Policy.cs" />
+    <Compile Include="PolicyFile.cs" />
+    <Compile Include="PolicyItem.cs" />
+    <Compile Include="PolicySearcher.xaml.cs">
+      <DependentUpon>PolicySearcher.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PolicySelect.xaml.cs">
+      <DependentUpon>PolicySelect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PolicySet.cs" />
+    <Compile Include="PolicyView.xaml.cs">
+      <DependentUpon>PolicyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PreferenceReport.cs" />
+    <Compile Include="PreferenceReportItem.cs" />
+    <Compile Include="PreferenceSearcher.xaml.cs">
+      <DependentUpon>PreferenceSearcher.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProgressView.xaml.cs">
+      <DependentUpon>ProgressView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AssignmentItem.cs" />
+    <Compile Include="LinkageItem.cs" />
+    <Compile Include="RootNodePreferenceReportHolder.cs" />
+    <Compile Include="SearchableIEAKItem.cs" />
+    <Compile Include="SearchablePolicyItem.cs" />
+    <Compile Include="DiffingClasses\SecEditDiffInfo.cs" />
+    <Compile Include="SearchableSecEditItem.cs" />
+    <Compile Include="SearchableXMLItem.cs" />
+    <Compile Include="SecEditSearcher.xaml.cs">
+      <DependentUpon>SecEditSearcher.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WMIItem.cs" />
+    <Compile Include="SecEditFile.cs" />
+    <Compile Include="SecEditSection.cs" />
+    <Compile Include="SecEditValuePair.cs" />
+    <Compile Include="DiffingClasses\WMIDiffInfo.cs" />
+    <Compile Include="WMISearcher.xaml.cs">
+      <DependentUpon>WMISearcher.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PolReaderXMLNode.cs" />
+    <Compile Include="PolReaderXMLProperty.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="GPOManagement.cs.task.old" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="GPMGMTLib">
+      <Guid>{C2F48CC2-305B-4672-BAA7-76A57738F48A}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\add_page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\delete_page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\machineadd.png" />
+    <Resource Include="Icons\machinedelete.png" />
+    <Resource Include="Icons\machinerefresh.png" />
+    <Resource Include="Icons\useradd.png" />
+    <Resource Include="Icons\userdelete.png" />
+    <Resource Include="Icons\userrefresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\paw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Document.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="EXPLORER.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\UnLinkedPolicy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\accept_page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\new_page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\LinkedPolicy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="OUSelector\Images\Domain.png" />
+    <Resource Include="OUSelector\Images\OU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\computer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\FilteredLinkedPolicy.png" />
+    <Resource Include="Icons\FilteredUnLinkedPolicy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\SecFilteredLinkedPolicy.png" />
+    <Resource Include="Icons\SecFilteredUnLinkedPolicy.png" />
+    <Resource Include="Icons\SecLinkedPolicy.png" />
+    <Resource Include="Icons\SecUnLinkedPolicy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Secedit.png" />
+    <Resource Include="Icons\SeceditAdd.png" />
+    <Resource Include="Icons\SeceditDelete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\SeceditRefresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\nochange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\filterrefresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\linkrefresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\IEAK.png" />
+    <Resource Include="Icons\IEAKadd.png" />
+    <Resource Include="Icons\IEAKdelete.png" />
+    <Resource Include="Icons\IEAKrefresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\node.png" />
+    <Resource Include="Icons\nodeAdd.png" />
+    <Resource Include="Icons\nodeDelete.png" />
+    <Resource Include="Icons\nodeRefresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\usersrefresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

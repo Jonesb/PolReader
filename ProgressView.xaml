@@ -1,0 +1,19 @@
+﻿<Window x:Class="PolReader.ProgressView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="149" Width="293" WindowStyle="None" ShowInTaskbar="False"  WindowStartupLocation="CenterOwner" ResizeMode="CanResize">
+    <Window.Resources>
+       
+
+    </Window.Resources>
+    <Grid Background="{StaticResource greyControlGradient}" Name="FormContainer">        
+        
+            <StackPanel >
+            <TextBox Name="DetailText" IsReadOnly="True" Margin="0,20,0,0" Text="Starting......" HorizontalAlignment="Center" BorderBrush="{StaticResource greyControlGradient}" Background="{StaticResource greyControlGradient}"></TextBox>
+            <TextBox Name="InfoText" IsReadOnly="True" Text="" HorizontalAlignment="Center" BorderBrush="{StaticResource greyControlGradient}" Background="{StaticResource greyControlGradient}"></TextBox>
+            </StackPanel>    
+        
+            <ProgressBar Name="ProgBar" Height="17" Margin="15,0,15,30" VerticalAlignment="Bottom" />
+        
+    </Grid>
+</Window>

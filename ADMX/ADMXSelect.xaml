@@ -1,0 +1,30 @@
+﻿<Window x:Class="ADMX.ADMXSelect"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Select ADMX Location" Height="159" Width="370"
+        KeyDown="Window_KeyDown"
+        WindowStyle="ToolWindow" ShowInTaskbar="False" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <Grid Background="{StaticResource greyControlGradient}" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <GroupBox Margin="5,5,5,5"  Grid.Row="0" HorizontalAlignment="Left">
+            <GroupBox.Header>
+                ADMX Location and Language
+            </GroupBox.Header>
+            <StackPanel Orientation="Vertical" >
+            <StackPanel Margin="5,5,5,5"  Orientation="Horizontal" >
+                <TextBox IsReadOnly="True" Name="ADMXLocation" Height="24" MinWidth="280" MaxWidth="250" ></TextBox>
+                <Button Margin="5,0,0,0" Height="24" Background="{StaticResource greyButtonGradient}" Name="ADMXLocationButton" Content="..." Width="30" Click="ADMXLocation_Click" ></Button>                
+            </StackPanel>
+                <ComboBox Margin="5,5,5,5" IsEnabled="False" MinWidth="100" Name="LanguageSelection" HorizontalAlignment="Center"></ComboBox>
+            </StackPanel>
+        </GroupBox>
+        <StackPanel Margin="5,5,5,5"  Orientation="Horizontal" HorizontalAlignment="Center"  Grid.Row="2" >
+            <Button IsEnabled="False" Margin="5,0,0,0" Height="24" Background="{StaticResource greyButtonGradient}" Name="OKButton" Content="OK" Width="60" Click="OKButton_Click"></Button>
+            <Button  Margin="5,0,0,0" Height="24" Background="{StaticResource greyButtonGradient}" Name="CancellButoon" Content="Cancel" Width="60" Click="CancellButoon_Click" ></Button>
+        </StackPanel>
+    </Grid>
+</Window>
